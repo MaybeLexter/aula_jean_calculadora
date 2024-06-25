@@ -1,5 +1,5 @@
 body {
-  display:flex;
+  display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
@@ -8,9 +8,10 @@ body {
   font-family: 'Arial', sans-serif;
   color: rgb(0, 255, 94);
 }
-h1{ 
-    color:  rgb(0, 255, 94);
-  }
+
+h1 {
+  color: rgb(0, 255, 94);
+}
 
 .calculator {
   border: 1px solid #bbb;
@@ -18,6 +19,7 @@ h1{
   padding: 20px;
   background-color: #ffffff;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 90vw;
 }
 
 .display {
@@ -56,4 +58,36 @@ h1{
 .button:active {
   background-color: #323131;
   transform: translateY(0);
+}
+
+
+@media (max-width: 600px) {
+  .calculator {
+    padding: 10px;
+  }
+
+  .display {
+    font-size: 1.5em;
+    padding: 10px;
+  }
+
+  .button {
+    padding: 15px;
+    font-size: 1.2em;
+  }
+
+  .buttons {
+    gap: 10px;
+  }
+}
+
+@media (max-width: 400px) {
+  .buttons {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .button {
+    padding: 10px;
+    font-size: 1em;
+  }
 }
